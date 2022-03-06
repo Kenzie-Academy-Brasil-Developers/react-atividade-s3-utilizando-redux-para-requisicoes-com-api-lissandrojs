@@ -1,14 +1,14 @@
 import Search from "./components/Search";
 import DigimonList from "./components/DigimonList";
+import GLobalStyle from "./styles/index.js"
 
 
 const App=()=> {
   return (
     <>
-  
-      <Search/>
-      <DigimonList/>
-      
+      <GLobalStyle/>
+        <Search/>
+        <DigimonList/>   
     </>
   );
 }

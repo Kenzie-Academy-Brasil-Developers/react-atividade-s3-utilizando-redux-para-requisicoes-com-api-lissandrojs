@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux"
+import { Container } from "./styles"
 const DigimonList = ()=>{
     const {digimons} = useSelector((state)=> state)
     
@@ -7,11 +8,12 @@ const DigimonList = ()=>{
                     <ul>
                         <li>
                         {digimons.map((digimon,index)=>
-                        (<div key={index}>
+                        (<Container  key={index}>
 
-                            <p>{digimons[0].name}</p>
-                            <img src={digimons[0].img} alt={digimons[0].name} />
-                        </div>
+                            <h1>{digimon.name}</h1>
+                            <img src={digimon.img} alt={digimon.name} />
+                            <h4> Nivel :{digimon.level}</h4>
+                        </Container>
 )
                         )}
                         </li>
